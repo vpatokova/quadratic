@@ -6,19 +6,21 @@
 #include "../include/NRoots.h"
 #include "test_mode.h"
 
-void test_input(double *a_ptr, double *b_ptr, double *c_ptr,
+void test_input(FILE *file, double *a_ptr, double *b_ptr, double *c_ptr,
                 int *expected_nRoots_ptr, double *expected_x1_ptr, double *expected_x2_ptr)
 {
-    input(a_ptr, b_ptr, c_ptr);
+    fscanf(file, "%lg %lg %lg", a_ptr, b_ptr, c_ptr);
 
-    scanf("%d", expected_nRoots_ptr);
+    fscanf(file, "%d", expected_nRoots_ptr);
 
     if      (*expected_nRoots_ptr == 2)
-        scanf("%lg %lg", expected_x1_ptr, expected_x2_ptr);
+        fscanf(file, "%lg %lg", expected_x1_ptr, expected_x2_ptr);
     else if (*expected_nRoots_ptr == 1)
-        scanf("%lg", expected_x1_ptr);
+        fscanf(file, "%lg", expected_x1_ptr);
     /*else (if *expected_nRoots_ptr == 0 || *expected_nRoots_ptr == 3 )
         continue;*/
+
+    fclose(file);
 }
 
 int check_roots(int test_number, int number_roots, double x1, double x2,
@@ -52,12 +54,14 @@ void test_equation()
     int test_number  = 1;
     int failed_tests = 0;
 
+    FILE *file = fopen("test.txt", "r");
+
     while (!feof(stdin))
     {
         double expected_x1  = 0;
         double expected_x2  = 0;
 
-        test_input(&a, &b, &c, &expected_nRoots, &expected_x1, &expected_x2);
+        test_input(file, &a, &b, &c, &expected_nRoots, &expected_x1, &expected_x2);
 
         double x1 = 0;
         double x2 = 0;

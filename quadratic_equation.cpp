@@ -7,7 +7,7 @@
 #include "include/NRoots.h"
 #include "include/solve_equation.h"
 
-//#define TEST_MODE
+#define TEST_MODE
 
 int main(void)
 {

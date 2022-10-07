@@ -5,7 +5,7 @@
 int input(double *a_ptr, double *b_ptr, double *c_ptr)
 {
     //printf("write coefficient a, b, c:\n");
-    char ch = 'a';
+    int ch = 0;
 
     while (scanf("%lg %lg %lg", a_ptr, b_ptr, c_ptr) != 3)
     {
@@ -19,6 +19,8 @@ int input(double *a_ptr, double *b_ptr, double *c_ptr)
             continue;
         }
     }
+    if ((ch = getchar()) !='\n')
+        return 0;
     return 1;
 }
 

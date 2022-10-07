@@ -18,7 +18,7 @@
     \param[in] expected_x2_ptr     Pointer at expected second root x2
 */
  
-void test_input(double *a_ptr, double *b_ptr, double *c_ptr,
+void test_input(FILE *file, double *a_ptr, double *b_ptr, double *c_ptr,
                 int *expected_nRoots_ptr, double *expected_x1_ptr, double *expected_x2_ptr);
 
 /*!
