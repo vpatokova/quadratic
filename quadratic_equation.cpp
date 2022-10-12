@@ -17,6 +17,7 @@ int main(void)
 
     #else
 
+    printf("Write coefficient a, b, c:\n");
     solve_equation();
     
     #endif

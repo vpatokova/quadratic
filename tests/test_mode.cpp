@@ -56,7 +56,7 @@ void test_equation()
 
     FILE *file = fopen("test.txt", "r");
 
-    while (!feof(stdin))
+    while (!feof(file))
     {
         double expected_x1  = 0;
         double expected_x2  = 0;

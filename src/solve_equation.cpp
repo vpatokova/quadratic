@@ -26,8 +26,5 @@ void solve_equation()
         printer(number_roots, x1, x2);
     }
     else
-    {
         printf("Input was not correct");
-        abort();
-    }
 }
