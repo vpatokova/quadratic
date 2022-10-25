@@ -4,7 +4,7 @@
 
 int input(double *a_ptr, double *b_ptr, double *c_ptr)
 {
-    //printf("write coefficient a, b, c:\n");
+    printf("Write coefficient a, b, c:\n");
     int ch = 0;
 
     while (scanf("%lg %lg %lg", a_ptr, b_ptr, c_ptr) != 3)

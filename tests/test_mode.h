@@ -41,4 +41,7 @@ int check_roots(int test_number, int number_roots, double x1, double x2,
 */
 void test_equation();
 
+int count_chars(FILE *file);
+int count_tests(FILE *file, int n_chars);
+
 #endif // !CHECK_ROOTS_H

@@ -7,7 +7,7 @@
 #include "include/NRoots.h"
 #include "include/solve_equation.h"
 
-//#define TEST_MODE
+#define TEST_MODE
 
 int main(void)
 {
@@ -17,7 +17,6 @@ int main(void)
 
     #else
 
-    printf("Write coefficient a, b, c:\n");
     solve_equation();
     
     #endif
