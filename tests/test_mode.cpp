@@ -9,40 +9,6 @@
 #include "../include/NRoots.h"
 #include "test_mode.h"
 
-/*int count_chars(FILE *file)
-{
-    assert(file != nullptr);
-
-    int start_point = ftell(file);
-
-    fseek(file, 0L, SEEK_END);
-
-    int n_chars = ftell(file) - start_point;
-
-    fseek(file, start_point, SEEK_SET);
-
-    return n_chars;
-}
-
-int count_tests(FILE *file, int n_chars)
-{
-    int n_tests = 0;
-    char *buf = (char *) calloc(n_chars + 1, sizeof(char));
-    assert(buf != nullptr);
-
-    fread(buf, sizeof(char), n_chars, file);
-
-    fseek(file, 0L, SEEK_SET);
-
-    for (int count = 0; count <= n_chars; count ++)
-        if (buf[count] == '\n')
-            n_tests++;
-
-    free(buf);
-
-    return n_tests;
-}*/
-
 void test_input(FILE *file, double *a_ptr, double *b_ptr, double *c_ptr,
                 int *expected_nRoots_ptr, double *expected_x1_ptr, double *expected_x2_ptr)
 {
@@ -94,10 +60,6 @@ void test_equation()
     FILE *file = fopen(input_file_path, "r");
     assert(file != nullptr);
 
-    //int n_chars = count_chars(file);
-    //int n_tests = count_tests(file, n_chars);
-
-    //for (int i = 0; i < n_tests; i++)
     while(!feof(file))
     {
         double expected_x1  = 0;
