@@ -11,7 +11,7 @@ SOURCES = quadratic_equation.cpp src/io.cpp src/solve_equation.cpp src/solver.cp
 
 OBJECTS = $(SOURCES:.cpp=.o)
 
-EXECUTABLE = fuck
+EXECUTABLE = hello
 
 all: $(SOURCES) $(EXECUTABLE)
 
@@ -24,4 +24,4 @@ $(EXECUTABLE): $(OBJECTS)
 	$(CC) $(FLAGS) $(OBJECTS) -o $@
 
 clean:
-	-rm obj/*.o src/*.o *.o fuck.exe
+	-rm obj/*.o src/*.o *.o hello.exe
